@@ -18,8 +18,8 @@ model User {
   email     String      @unique
   name      String?
   image     String?
-  UserRooms UserRooms[]
-  Message   Message[]
+  userRooms UserRooms[]
+  message   Message[]
 }
 
 model Room {
@@ -28,8 +28,8 @@ model Room {
   roomNumber Int      @unique
   createdAt  DateTime @default(now())
 
-  UserRooms UserRooms[]
-  Message   Message[]
+  userRooms UserRooms[]
+  message   Message[]
 }
 
 model UserRooms {

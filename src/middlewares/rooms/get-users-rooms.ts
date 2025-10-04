@@ -11,8 +11,7 @@ export const getUsersRooms = async (req: Request, res: Response) => {
       include: {
         room: {
           include: {
-            // Fetch the last message for the room
-            Message: {
+            message: {
               orderBy: { createdAt: "desc" },
               take: 1,
             },
