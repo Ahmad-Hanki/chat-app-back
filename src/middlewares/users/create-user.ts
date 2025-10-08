@@ -21,8 +21,6 @@ export const createUser = async (request: Request, response: Response) => {
 
     if (newUser) {
       return response.status(201).json(newUser);
-    } else {
-      return response.status(400).json({ message: "User creation failed" });
     }
   } catch (error) {
     console.error("Error creating user:", error);

@@ -12,6 +12,7 @@ export const getUser = async (request: Request, response: Response) => {
     if (user) {
       return response.status(200).json({ data: user });
     }
+    return response.status(404).json({ message: "User not found" });
   } catch (error) {
     console.error("Error fetching user:", error);
     response.status(500).json({ message: "Internal Server Error" });
